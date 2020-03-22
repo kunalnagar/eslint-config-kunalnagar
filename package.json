@@ -1,26 +1,60 @@
 {
-  "name": "eslint-plugin-kunalnagar",
+  "name": "eslint-config-kunalnagar",
   "version": "0.0.1",
   "description": "An ESLint + Prettier + React base configuration",
   "keywords": [
     "eslint",
-    "eslintplugin",
-    "eslint-plugin"
+    "eslintconfig"
   ],
+  "license": "ISC",
   "author": "Kunal Nagar <knlnagar@gmail.com>",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "preinstall": "node check_node_version.js",
+    "lint": "eslint index.js --config=index.js"
   },
-  "dependencies": {
-    "requireindex": "~1.1.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "index.js": [
+      "prettier --write",
+      "eslint --fix index.js --max-warnings 0"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ]
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
-    "mocha": "^3.1.2"
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^2.0.1",
+    "react": "^16.13.1",
+    "sort-package-json": "^1.40.0",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "eslint": "6.x",
+    "eslint-config-prettier": "6.x",
+    "eslint-config-react-app": "5.x",
+    "eslint-plugin-prettier": "3.x",
+    "eslint-plugin-react": "7.x",
+    "prettier": "2.x",
+    "typescript": "3.x"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": "12.16.1"
   },
-  "license": "ISC"
+  "engineStrict": true
 }
