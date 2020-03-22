@@ -21,7 +21,7 @@
   "lint-staged": {
     "index.js": [
       "prettier --write",
-      "eslint --fix index.js --max-warnings 0"
+      "eslint --fix index.js --config=index.js --max-warnings 0"
     ],
     "package.json": [
       "sort-package-json"
