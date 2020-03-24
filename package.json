@@ -1,12 +1,27 @@
 {
   "name": "eslint-config-kunalnagar",
   "version": "0.0.1",
-  "description": "An ESLint + Prettier + React base configuration",
+  "description": "An ESLint + Prettier + Typescript + React base configuration",
   "keywords": [
     "eslint",
-    "eslintconfig"
+    "eslintconfig",
+    "typescript",
+    "react",
+    "prettier",
+    "checker",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "enforce",
+    "jshint",
+    "lint",
+    "code",
+    "quality",
+    "style checker",
+    "style linter"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "author": "Kunal Nagar <knlnagar@gmail.com>",
   "main": "index.js",
   "scripts": {
