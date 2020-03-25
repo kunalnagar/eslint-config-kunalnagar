@@ -4,4 +4,3 @@ node_modules/
 
 .prettierrc.js
 .gitignore
-check_node_version.js
