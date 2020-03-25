@@ -55,6 +55,6 @@ If you want you can configure/override rules as well:
 }
 ```
 
-## 👨‍💻 Contributing & Support
+## 👨‍💻 Support
 
-Please create a new issue [here](https://github.com/kunalnagar/eslint-config-kunalnagar/issues) and add as many details as you can.
+Please create a new issue [here](https://github.com/kunalnagar/eslint-config-kunalnagar/issues).
