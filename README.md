@@ -1,51 +1,60 @@
-# eslint-plugin-kunalnagar
+# ⚛️ eslint-config-kunalnagar
 
-An ESLint + Prettier + React base configuration
+![CircleCI](https://img.shields.io/circleci/build/github/kunalnagar/eslint-config-kunalnagar/develop?token=6961e38f0ab710cad0cbba48bf771ee3bdb2e225) [![npm](https://img.shields.io/npm/v/eslint-config-kunalnagar?color=blue)](https://www.npmjs.com/package/eslint-config-kunalnagar)
 
-## Installation
+An ESLint shareable config that lints React projects with the following configuration:
 
-You'll first need to install [ESLint](http://eslint.org):
+- ESLint
+- Prettier
+- React
+- TypeScript
 
-```
-$ npm i eslint --save-dev
-```
+## 🛠 Installation
 
-Next, install `eslint-plugin-kunalnagar`:
+### Step 1
+
+Add the package to your `devDependencies`:
 
 ```
 $ npm install eslint-plugin-kunalnagar --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-kunalnagar` globally.
+### Step 2
 
-## Usage
+Install the `peerDependencies` using:
 
-Add `kunalnagar` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+```
+npx install-peerdeps eslint-config-kunalnagar --dev
+```
+
+## 💻 Usage
+
+Add it to the `extends` section of your `.eslintrc` configuration file.
 
 ```json
 {
-    "plugins": [
-        "kunalnagar"
-    ]
+  "extends": ["eslint-config-kunalnagar"]
 }
 ```
 
+## 💼 Optional
 
-Then configure the rules you want to use under the rules section.
+If you want you can configure/override rules as well:
 
 ```json
 {
-    "rules": {
-        "kunalnagar/rule-name": 2
-    }
+  .
+  ...
+  ....
+  "overrides": {
+    "override-rule-name": "override-rule-option"
+  },
+  "rules": {
+    "rule-name": "rule-option"
+  }
 }
 ```
 
-## Supported Rules
+## 👨‍💻 Support
 
-* Fill in provided rules here
-
-
-
-
-
+Please create a new issue [here](https://github.com/kunalnagar/eslint-config-kunalnagar/issues).
