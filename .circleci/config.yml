@@ -29,7 +29,7 @@ jobs:
           command: npm publish
 
 workflows:
-  kesar-build-deploy:
+  build-deploy-workflow:
     jobs:
       - build
       - deploy:
@@ -39,5 +39,4 @@ workflows:
             tags:
               only: /^v.*/
             branches:
-              only:
-                - develop
+              only: develop
