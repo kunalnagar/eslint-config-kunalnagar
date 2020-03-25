@@ -1,0 +1,7 @@
+node_modules/
+.circleci/
+.vscode/
+
+.prettierrc.js
+.gitignore
+check_node_version.js

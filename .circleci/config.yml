@@ -1,0 +1,43 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.16.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Run linter
+          command: npm run lint
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+  deploy:
+    docker:
+      - image: circleci/node:12.16.1
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with npm registry
+          command: echo "//registry.npmjs.org/:_authToken=${TOKEN_NPM_RW}" >> .npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+
+workflows:
+  kesar-build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only:
+                - develop
