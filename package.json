@@ -4,6 +4,7 @@
   "description": "An ESLint + Prettier + Typescript + React base configuration",
   "keywords": [
     "eslint",
+    "eslint-config",
     "eslintconfig",
     "typescript",
     "react",
