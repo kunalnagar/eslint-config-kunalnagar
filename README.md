@@ -16,7 +16,7 @@ An ESLint shareable config that lints React projects with the following configur
 Add the package to your `devDependencies`:
 
 ```
-$ npm install eslint-plugin-kunalnagar --save-dev
+$ npm install eslint-config-kunalnagar --save-dev
 ```
 
 ### Step 2
