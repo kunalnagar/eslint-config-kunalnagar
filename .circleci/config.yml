@@ -40,7 +40,8 @@ workflows:
       - deploy:
           requires:
             - build
-          branches:
-            ignore: /.*/
-          tags:
-            only: /^v\d+\.\d+\.\d+?$/
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v\d+\.\d+\.\d+?$/
