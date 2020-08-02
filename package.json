@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kunalnagar",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "An ESLint + Prettier + Typescript + React base configuration",
   "keywords": [
     "eslint",
@@ -26,7 +26,8 @@
   "author": "Kunal Nagar <knlnagar@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js --config=index.js"
+    "lint": "eslint index.js --config=index.js",
+    "lint:ci": "yaml-validator .circleci/config.yml"
   },
   "husky": {
     "hooks": {
@@ -42,6 +43,7 @@
       "sort-package-json"
     ]
   },
+  "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
@@ -59,7 +61,8 @@
     "prettier": "^2.0.1",
     "react": "^16.13.1",
     "sort-package-json": "^1.40.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "yaml-validator": "^3.0.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "2.x",
