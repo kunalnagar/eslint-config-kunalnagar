@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kunalnagar",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An ESLint + Prettier + Typescript + React base configuration",
   "keywords": [
     "eslint",
@@ -26,7 +26,6 @@
   "author": "Kunal Nagar <knlnagar@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node check_node_version.js",
     "lint": "eslint index.js --config=index.js"
   },
   "husky": {
@@ -76,9 +75,5 @@
     "eslint-plugin-react-hooks": "2.x",
     "prettier": "2.x",
     "typescript": "3.x"
-  },
-  "engines": {
-    "node": "12.16.1"
-  },
-  "engineStrict": true
+  }
 }

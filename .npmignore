@@ -4,3 +4,5 @@ node_modules/
 
 .prettierrc.js
 .gitignore
+.nvmrc
+package-lock.json
