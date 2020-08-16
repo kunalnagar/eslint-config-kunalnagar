@@ -9,11 +9,6 @@ jobs:
       - run:
           name: Install dependencies
           command: npm install
-      - run:
-          name: Lint files
-          command: |
-            npm run lint
-            npm run lint:ci
       - persist_to_workspace:
           root: ~/project
           paths: .

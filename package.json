@@ -25,20 +25,7 @@
   "license": "MIT",
   "author": "Kunal Nagar <knlnagar@gmail.com>",
   "main": "index.js",
-  "scripts": {
-    "lint": "eslint index.js --config=index.js",
-    "lint:ci": "yaml-validator .circleci/config.yml"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "index.js": [
-      "prettier --write",
-      "eslint --fix index.js --config=index.js --max-warnings 0"
-    ],
     "package.json": [
       "sort-package-json"
     ]
@@ -56,13 +43,11 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
     "prettier": "^2.0.1",
     "react": "^16.13.1",
     "sort-package-json": "^1.40.0",
-    "typescript": "^3.8.3",
-    "yaml-validator": "^3.0.0"
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "2.x",
