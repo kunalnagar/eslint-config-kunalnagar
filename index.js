@@ -12,8 +12,12 @@ module.exports = {
   // override them, we need to use overrides as well
   overrides: [
     {
-      files: ['src/**/*.ts', 'src/**/*.tsx'],
+      files: ['**/*.ts', '**/*.tsx'],
       rules: {
+        '@typescript-eslint/explicit-member-accessibility': [
+          'error',
+          'no-public',
+        ],
         '@typescript-eslint/camelcase': [
           'error',
           {
@@ -42,6 +46,9 @@ module.exports = {
       },
     },
   ],
+  parserOptions: {
+    project: ['./tsconfig.json', './tsconfig.*.json'],
+  },
   rules: {
     'default-case': 'error',
     eqeqeq: 'error',
