@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kunalnagar",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An ESLint + Prettier + Typescript + React base configuration",
   "keywords": [
     "eslint",

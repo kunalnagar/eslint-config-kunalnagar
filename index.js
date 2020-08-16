@@ -14,10 +14,14 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       rules: {
-        '@typescript-eslint/explicit-member-accessibility': [
-          'error',
-          'no-public',
-        ],
+        /**
+         * TODO
+         * - When CRA supports typescript-eslint 1.7.0:
+         *   '@typescript-eslint/explicit-member-accessibility': [
+         *     'error',
+         *     'no-public',
+         *   ],
+         */
         '@typescript-eslint/camelcase': [
           'error',
           {
@@ -47,79 +51,15 @@ module.exports = {
     },
   ],
   parserOptions: {
-    project: ['./tsconfig.json', './tsconfig.*.json'],
+    project: './tsconfig.json',
   },
   rules: {
-    'default-case': 'error',
-    eqeqeq: 'error',
     'linebreak-style': ['error', 'unix'],
     'no-console': 'warn',
     'no-debugger': 'warn',
-    'no-duplicate-imports': 'error',
-    'no-lonely-if': 'error',
-    'no-magic-numbers': [
-      'error',
-      {
-        ignore: [0, 1, 2],
-      },
-    ],
-    'no-restricted-imports': [
-      'error',
-      {
-        paths: [
-          {
-            message: 'Please import from styled-components/macro.',
-            name: 'styled-components',
-          },
-        ],
-        patterns: ['!styled-components/macro'],
-      },
-    ],
     // Disabled because this flags styled-components multiline template literals
     'no-unexpected-multiline': 'off',
-    'no-unneeded-ternary': 'error',
-    'no-useless-computed-key': 'error',
-    'no-useless-rename': 'error',
-    'object-shorthand': 'error',
-    'padded-blocks': ['error', 'never'],
-    'padding-line-between-statements': [
-      'error',
-      {
-        blankLine: 'always',
-        next: 'return',
-        prev: '*',
-      },
-      {
-        blankLine: 'always',
-        next: 'block-like',
-        prev: '*',
-      },
-      {
-        blankLine: 'always',
-        next: '*',
-        prev: 'block-like',
-      },
-      {
-        blankLine: 'always',
-        next: 'break',
-        prev: '*',
-      },
-      {
-        blankLine: 'always',
-        next: 'continue',
-        prev: '*',
-      },
-    ],
-    'prefer-arrow-callback': [
-      'error',
-      {
-        allowNamedFunctions: true,
-      },
-    ],
     'prefer-const': 'warn',
-    'prefer-destructuring': 'error',
-    'prefer-object-spread': 'error',
-    'prefer-rest-params': 'error',
     'react/jsx-handler-names': 'error',
     'react/sort-comp': [
       'error',
@@ -135,20 +75,5 @@ module.exports = {
         ],
       },
     ],
-    'sort-imports': [
-      'error',
-      {
-        ignoreDeclarationSort: true,
-      },
-    ],
-    'sort-keys': [
-      'error',
-      'asc',
-      {
-        natural: true,
-      },
-    ],
-    'sort-vars': 'error',
-    yoda: 'error',
   },
 }
